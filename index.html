@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Miguel Sanz Jiménez - Gallery</title>
+    <title>Dr. Miguel Sanz Jiménez - Media</title>
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- CSS only -->
@@ -21,8 +21,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <style>
         body {
             color: black;
@@ -34,206 +32,78 @@
             text-align: center;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         .navbar-brand {
             display: block;
             margin: 0 auto;
         }
 
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 50px;
+        a {
+            color: black;
         }
 
-        .about-photos-top-container {
-            margin: 15px;
+        a:hover {
+            color: rgb(0, 123, 255);
         }
 
-        .about-photos {
-            max-width: 70%;
-            min-width: 300px;
+        html {
+            scroll-behavior: smooth;
         }
 
-        .about-img {
-            width: 300px;
-            margin-bottom: 15px;
+        h1 {
+            margin-top: 25px;
         }
 
-        .btn {
-            margin-bottom: 50px;
-        }
-
-        /*footer*/
-
-
-        .footer-icon {
-            width: 20px;
-            height: 20px;
-            margin-bottom: 20px;
-        }
-
-        .nav-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0;
-        }
-
-        .container {
-            margin-top: 30px;
-            max-width: 1200px;
-            width: 95%;
-        }
-
-        .slider-wrapper {
-            position: relative;
-        }
-
-        .slider-wrapper .slide-button {
-            position: absolute;
-            top: 40%;
-            outline: none;
-            border: none;
-            height: 50px;
-            width: 50px;
-            z-index: 5;
-            color: #fff;
-            display: flex;
-            cursor: pointer;
-            font-size: 2.2rem;
-            background: #0091ff;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-
-        .slider-wrapper .slide-button:hover {
-            background: #366bbb;
-        }
-
-        .slider-wrapper .slide-button#prev-slide {
-            left: -25px;
-            display: none;
-        }
-
-        .slider-wrapper .slide-button#next-slide {
-            right: -25px;
-        }
-
-        .slider-wrapper .image-list {
-            display: grid;
-            grid-template-columns: repeat(32, 1fr);
-            gap: 18px;
-            font-size: 0;
-            list-style: none;
-            margin-bottom: 30px;
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
-
-        .slider-wrapper .image-list::-webkit-scrollbar {
-            display: none;
-        }
-
-        .image-container {
-            font-size: 1rem;
-        }
-
-        .image-container p {
+        h2 {
             margin-top: 15px;
         }
 
-        .slider-wrapper .image-list .image-item {
-            max-width: 600px;
-            min-width: 300px;
-            max-height: 600px;
-            object-fit: cover;
-        }
 
-        .image-item {
-            width: 100%;
-        }
+        .media-container {
 
-        .container .slider-scrollbar {
-            height: 24px;
-            width: 100%;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+
         }
 
-        .slider-scrollbar .scrollbar-track {
-            background: #ccc;
-            width: 100%;
-            height: 2px;
+        .media_btn {
+            width: 200px;
+            border-radius: 50%;
+            transition: .2s linear;
+        }
+
+        .media_btn:hover {
+            opacity: .5;
+        }
+
+        .media-text {
+            margin: 15px 25px;
+        }
+
+        .media_box {
             display: flex;
+            justify-content: space-evenly;
             align-items: center;
-            border-radius: 4px;
-            position: relative;
+            width: 70%;
+            flex-wrap: wrap;
+            margin: 0 auto;
         }
 
-        .slider-scrollbar:hover .scrollbar-track {
-            height: 4px;
+        .media_int {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            margin-bottom: 45px;
         }
 
-        .slider-scrollbar .scrollbar-thumb {
-            position: absolute;
-            background: #000;
-            top: 0;
-            bottom: 0;
-            width: 50%;
-            height: 100%;
-            cursor: grab;
-            border-radius: inherit;
-        }
 
-        .slider-scrollbar .scrollbar-thumb:active {
-            cursor: grabbing;
-            height: 8px;
-            top: -2px;
-        }
-
-        .slider-scrollbar .scrollbar-thumb::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: -10px;
-            bottom: -10px;
-        }
-
-        /* Styles for mobile and tablets */
-        @media only screen and (max-width: 1023px) {
-            .slider-wrapper .slide-button {
-                display: none !important;
-            }
-
-            .slider-wrapper .image-list {
-                gap: 10px;
-                margin-bottom: 15px;
-                scroll-snap-type: x mandatory;
-            }
-
-            .slider-wrapper .image-list .image-item {
-                width: 280px;
-                height: 380px;
-            }
-
-            .slider-scrollbar .scrollbar-thumb {
-                width: 20%;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-
-
-            .slider-scrollbar {
-                visibility: hidden;
-            }
+        /*footer*/
+        .footer-icon {
+            margin: 0 auto;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -258,14 +128,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://miguelsanzjimenez.github.io/translations/">Translations</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="https://miguelsanzjimenez.github.io/media/">Media</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://miguelsanzjimenez.github.io/education/">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://miguelsanzjimenez.github.io/gallery/">Gallery</a>
+                    <a class="nav-link" href="https://miguelsanzjimenez.github.io/gallery/">Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://miguelsanzjimenez.github.io/contact/">Contact</a>
@@ -275,261 +145,197 @@
         </div>
     </nav>
 
-    <section id="gallery">
-        <br>
-        <br>
-        <br>
-        <br>
+    <section id="media">
+        <div class="media-container">
+            <br>
+            <br>
+            <br>
+            <h1>Media</h1>
+            <p class="media-text">Dr. Sanz Jiménez has appeared in various articles and podcasts.</p>
+            <br>
+            <div class="media_box">
+                <div class="media_int">
+                    <a href="https://www.zendalibros.com/el-diablo-te-lleva-a-casa-de-gabino-iglesias/"
+                        target="_blank"><img class="media_btn" src="zenda.jpg" alt="tdt-logo"></a>
+                    <h2>Zenda</h2>
+                    <a class="article_link"
+                        href="https://www.zendalibros.com/el-diablo-te-lleva-a-casa-de-gabino-iglesias/"
+                        target="_blank">El diablo te lleva a casa, de Gabino Iglesias<br>(September 16,
+                        2025)</a>
 
-        <div class="gallery-container">
-            <h1>Gallery</h1>
-            <div class="container">
-                <div class="slider-wrapper">
-                    <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
-                    <div class="image-list">
-                    </div>
-                    <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
                 </div>
-                <div class="slider-scrollbar">
-                    <div class="scrollbar-track">
-                        <div class="scrollbar-thumb"></div>
-                    </div>
+                <div class="media_int">
+                    <a href="https://tribuna.ucm.es/news/una-exposicion-repasa-en-filologia-las-vidas-y-obras-de-dos-iconos-truman-capote-y-james-baldwin"
+                        target="_blank"><img class="media_btn" src="complu.png" alt="tdt-logo"></a>
+                    <h2>Complutense</h2>
+                    <a class="article_link"
+                        href="https://tribuna.ucm.es/news/una-exposicion-repasa-en-filologia-las-vidas-y-obras-de-dos-iconos-truman-capote-y-james-baldwin"
+                        target="_blank">Una exposición de Truman
+                        Capote y James Baldwin<br>(March 31,
+                        2025)</a>
+
                 </div>
+                <div class="media_int">
+                    <a href="https://tertuliadetebeos.blogspot.com/2025/03/wes-slade-resena-por-jose.html"
+                        target="_blank"><img class="media_btn" src="tdt-logo.jpg" alt="tdt-logo"></a>
+                    <h2>TDT Podcast</h2>
+                    <a class="article_link"
+                        href="https://tertuliadetebeos.blogspot.com/2025/03/wes-slade-resena-por-jose.html"
+                        target="_blank">Wes Slade review on the TDT Podcast.<br>(March 4,
+                        2025)</a>
+
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.youtube.com/watch?v=8kBZI2qVn6k" target="_blank"><img class="media_btn"
+                            src="fomorama.jpg" alt="zona-negativa-logo"></a>
+                    <h2>FOMORAMA</h2>
+                    <a class="article_link" href="https://www.youtube.com/watch?v=8kBZI2qVn6k" target="_blank">FOMORAMA
+                        on <i>La liga de los presos</i><br>(November 14,
+                        2024)</a>
+
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.zonanegativa.com/reina-pirata/" target="_blank"><img class="media_btn"
+                            src="zona-negativa-logo.png" alt="zona-negativa-logo"></a>
+                    <h2>Zona Negativa</h2>
+                    <a class="article_link" href="https://www.zonanegativa.com/reina-pirata/" target="_blank">Reina
+                        Pirata, de Peter Milligan y Adam Pollina <br>(April 17,
+                        2024)</a>
+
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.zonanegativa.com/el-ojo-de-odinn/" target="_blank"><img class="media_btn"
+                            src="zona-negativa-logo.png" alt="zona-negativa-logo"></a>
+                    <h2>Zona Negativa</h2>
+                    <a class="article_link" href="https://www.zonanegativa.com/el-ojo-de-odinn/" target="_blank">El ojo
+                        de Odinn, de Joshua Dysart y Tomás Giorello <br>(February 19,
+                        2024)</a>
+
+                </div>
+
+
+                <div class="media_int">
+                    <a href="https://elpais.com/cultura/elemental/2023-06-02/15-buenas-novelas-negras-analizadas-y-comentadas-para-la-feria-del-libro-y-el-verano.html"
+                        target="_blank"><img class="media_btn" src="elpais.png" alt="elpais"></a>
+                    <h2>El País</h2>
+                    <a class="article_link"
+                        href="https://elpais.com/cultura/elemental/2023-06-02/15-buenas-novelas-negras-analizadas-y-comentadas-para-la-feria-del-libro-y-el-verano.html"
+                        target="_blank">15 buenas novelas negras analizadas y comentadas para la Feria del Libro <br>(y
+                        el verano) <br>(June 1,
+                        2023)</a>
+
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.lavanguardia.com/cultura/20220927/8544425/que-novelas-negras-leer-carlos-zanon.html"
+                        target="_blank"><img class="media_btn" src="vanguardia.png" alt="vanguardia"></a>
+                    <h2>La Vanguardia</h2>
+                    <a class="article_link"
+                        href="https://www.lavanguardia.com/cultura/20220927/8544425/que-novelas-negras-leer-carlos-zanon.html"
+                        target="_blank">'True crime', mossa de esquadra... cuatro <br>novelas negras para el inicio del
+                        otoño <br>(September 27,
+                        2022)</a>
+
+                </div>
+
+                <div class="media_int">
+                    <a href="https://elpais.com/cultura/elemental/2022-07-29/la-mejor-lectura-de-verano-20-novelas-negras-analizadas-y-comentadas.html"
+                        target="_blank"><img class="media_btn" src="elpais.png" alt="elpais"></a>
+                    <h2>El País</h2>
+                    <a class="article_link"
+                        href="https://elpais.com/cultura/elemental/2022-07-29/la-mejor-lectura-de-verano-20-novelas-negras-analizadas-y-comentadas.html"
+                        target="_blank">La
+                        mejor lectura de verano: 20 novelas <br>negras analizadas y comentadas <br>(July 28,
+                        2022)</a>
+
+                </div>
+
+
+                <div class="media_int">
+                    <a href="https://www.rtve.es/play/videos/pagina-dos/antonio-lucas/6217674/" target="_blank"><img
+                            class="media_btn" src="pagina-dos.jpeg" alt="pagina-dos"></a>
+                    <h2>Página Dos</h2>
+                    <a class="article_link" href="https://www.rtve.es/play/videos/pagina-dos/antonio-lucas/6217674/"
+                        target="_blank">
+                        La obra de Jack London (16:58-18:33)<br>(November 23,
+                        2021)</a>
+
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.larazon.es/cultura/20210821/7j2shspz3zh6zluxnwea3xhkny.html"
+                        target="blank"><img class="media_btn" src="larazon.png" alt="larazon"></a>
+                    <h2>La Razón</h2>
+                    <a href="https://www.larazon.es/cultura/20210821/7j2shspz3zh6zluxnwea3xhkny.html"
+                        class="article_link" target="_blank">Jack London: la amarga aventura del <br>alcoholismo<br>
+                        (August 8,
+                        2021)</a>
+                </div>
+
+                <div class="media_int">
+                    <a href="https://open.spotify.com/episode/7obhJCJ0DnWJ1Y0vXkvlqY" target="blank"><img
+                            class="media_btn" src="spotify.png" alt="spotify"></a>
+                    <h2>Radio Uruguay</h2>
+                    <a href="https://open.spotify.com/episode/7obhJCJ0DnWJ1Y0vXkvlqY" class="article_link"
+                        target="blank">Miguel Sanz Jiménez y su traducción <br>de "El pájaro carpintero" <br>(May
+                        2021)</a>
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.elsaltodiario.com/literatura/traduccion-literaria-problemas-condiciones-laborales"
+                        target="blank"> <img class="media_btn" src="elsalto.png" alt="elsalto"></a>
+                    <h2>El Salto</h2>
+                    <a href="https://www.elsaltodiario.com/literatura/traduccion-literaria-problemas-condiciones-laborales"
+                        class="article_link" target="blank">Traducción literaria: el trabajo de <br>llevar a otro
+                        idioma las páginas <br>de una novela <br>(June 20, 2020)</a>
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.rtve.es/play/videos/pagina-dos/pagina-dos-javier-marias/4247365/"
+                        target="_blank"><img class="media_btn" src="pagina-dos.jpeg" alt="pagina-dos"></a>
+                    <h2>Página Dos</h2>
+                    <a class="article_link"
+                        href="https://www.rtve.es/play/videos/pagina-dos/pagina-dos-javier-marias/4247365/"
+                        target="_blank">
+                        <i>El pájaro carpintero</i> es una <br>obra divertidísima (20:00-21:10) <br>(October 3,
+                        2017)</a>
+
+                </div>
+
+
+                <div class="media_int">
+                    <a href="https://www.infolibre.es/cultura/los-diablos-azules/reirse-cadenas_1_1145769.html"
+                        target="blank"><img class="media_btn" src="infolibre.png" alt="infolibre"></a>
+                    <h2>infoLibre</h2>
+                    <a href="https://www.infolibre.es/cultura/los-diablos-azules/reirse-cadenas_1_1145769.html"
+                        class="article_link" target="blank">Reírse de las cadenas<br>(September 29, 2017)</a>
+                </div>
+
+                <div class="media_int">
+                    <a href="https://www.indienauta.com/pajaro-carpintero-james-mcbride-hoja-lata-2017/"
+                        target="blank"><img class="media_btn" src="indienauta.png" alt="indienauta"></a>
+                    <h2>Indienauta</h2>
+                    <a href="https://www.indienauta.com/pajaro-carpintero-james-mcbride-hoja-lata-2017/"
+                        class="article_link" target="blank">El pájaro carpintero, James McBride<br>(September 26,
+                        2017)</a>
+                </div>
+
+
             </div>
+            <p class="footer-text">Copyright &#169; <span class="year">2002</span> | Miguel Sanz Jiménez</p>
+            <img class="footer-icon" src="favicon.ico" alt="icon">
         </div>
+
     </section>
-    <footer>
-        <p class="footer-text">Copyright &#169; <span class="year">2002</span> | Miguel Sanz Jiménez</p>
-        <img class="footer-icon" src="favicon.ico" alt="icon">
-    </footer>
 
     <script>
-        const galleryWrapper = document.querySelector('.image-list');
-
-        const galleryImages = [
-            {
-                image: 'images/01-cosby.jpg',
-                text: 'Dr. Sanz Jiménez with noir writer S.A. Cosby'
-            },
-            {
-                image: 'images/31-chimamanda.jpg',
-                text: 'At Chimamanda Ngozi Adichie&#39;s book signing'
-            },
-            {
-                image: 'images/32-chimamanda.jpg',
-                text: 'At Chimamanda Ngozi Adichie&#39;s book signing'
-            },
-            {
-                image: 'images/02-cosby.jpg',
-                text: 'Dr. Sanz Jiménez with noir writer S.A. Cosby'
-            },
-            {
-                image: 'images/03-cosby.jpg',
-                text: 'Dr. Sanz Jiménez with noir writer S.A. Cosby'
-            },
-            {
-                image: 'images/30-capote.png',
-                text: 'Speaking at the presentation of the exhibition on Capote and Baldwin'
-            },
-            {
-                image: 'images/29-galindo.jpg',
-                text: 'Meeting Juan Carlos Galindo, crime fiction connoisseur'
-            },
-            {
-                image: 'images/28-hitchcock.jpg',
-                text: 'Conference on Hitchcock\'s films'
-            },
-            {
-                image: 'images/26-ford.jpg',
-                text: 'Meeting American novelist Richard Ford'
-            },
-            {
-                image: 'images/27-hernandez.jpg',
-                text: 'With cartoonist Beto Hernández'
-            },
-            {
-                image: 'images/24-dicker.jpg',
-                text: 'Meeting Swiss thriller writer Joël Dicker'
-            },
-            {
-                image: 'images/25-presenting.jpg',
-                text: 'Presenting new research lines on crime fiction'
-            },
-            {
-                image: 'images/04-winslow.jpg',
-                text: 'Dr. Sanz Jiménez with American crime writer Don Winslow'
-            },
-            {
-                image: 'images/05-silva.jpg',
-                text: 'Dr. Sanz Jiménez with writer Lorenzo Silva at Getafe Negro'
-            },
-            {
-                image: 'images/06-jones.jpg',
-                text: 'Dr. Sanz Jiménez with horror writer Stephen Graham Jones'
-            },
-            {
-                image: 'images/07-whitehead.jpg',
-                text: 'Dr. Sanz Jiménez meets Pulitzer-prize winner Colson Whitehead'
-            },
-            {
-                image: 'images/22-offutt.jpg',
-                text: 'Meeting rural noir writer Chris Offutt'
-            },
-            {
-                image: 'images/20-jornada-western.jpg',
-                text: 'Hosting the Seminar on the Western at Complutense'
-            },
-            {
-                image: 'images/21-jornada-western.jpg',
-                text: 'Hosting the Seminar on the Western at Complutense'
-            },
-            {
-                image: 'images/23-alicante.jpg',
-                text: "Talking about crime fiction at Alicante University"
-
-            },
-            {
-                image: 'images/08-granada.jpg',
-                text: 'Dr. Sanz Jiménez sharing his research at Granada University'
-            },
-            {
-                image: 'images/09-everett.jpg',
-                text: 'Dr. Sanz Jiménez greets American novelist Percival Everett'
-            },
-            {
-                image: 'images/19-bilbao.jpg',
-                text: 'With writer and translator Jon Bilbao'
-            },
-            {
-                image: 'images/10-jaume.jpg',
-                text: 'Conference at Universitat Jaume I'
-            },
-            {
-                image: 'images/11-publishers.jpg',
-                text: 'Spanish publishers and Dr. Sanz Jiménez talk to students at Complutense University'
-            },
-            {
-                image: 'images/12-malaga.jpg',
-                text: 'Dr. Sanz Jiménez discusses his research at the University of Málaga'
-            },
-            {
-                image: 'images/13-belfast.jpg',
-                text: 'Dr. Sanz Jiménez in Belfast'
-            },
-            {
-                image: 'images/14-feria.jpg',
-                text: "At Madrid's Feria del Libro, Dr. Sanz Jiménez signs his books"
-
-            },
-            {
-                image: 'images/15-auster.jpg',
-                text: 'Dr. Sanz Jiménez meets American writer Paul Auster'
-            },
-            {
-                image: 'images/16-alcala.jpg',
-                text: 'Dr. Sanz Jiménez sharing his research at Alcalá University'
-            },
-            {
-                image: 'images/17-antolin.jpg',
-                text: 'Dr. Sanz Jiménez attends a lecture by Spanish translator Mariano Antolín Rato'
-            },
-            {
-                image: 'images/18-cantabria.jpg',
-                text: 'Dr. Sanz Jiménez discusses his research at the University of Cantabria'
-            }
-        ];
-
-        window.addEventListener('DOMContentLoaded', () => {
-            let generateHtml = galleryImages.map((item) => {
-                return ` 
-        <div class="image-container">                  
-            <img src="${item.image}" alt="" class="image-item">
-            <p>${item.text}</p>
-            </div> 
-
- `
-            })
-
-            galleryWrapper.innerHTML = generateHtml.join('');
-        })
-
-        const initSlider = () => {
-            const imageList = document.querySelector(".slider-wrapper .image-list");
-            const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-            const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
-            const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-            const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-            // Handle scrollbar thumb drag
-            scrollbarThumb.addEventListener("mousedown", (e) => {
-                const startX = e.clientX;
-                const thumbPosition = scrollbarThumb.offsetLeft;
-                const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
-
-                // Update thumb position on mouse move
-                const handleMouseMove = (e) => {
-                    const deltaX = e.clientX - startX;
-                    const newThumbPosition = thumbPosition + deltaX;
-
-                    // Ensure the scrollbar thumb stays within bounds
-                    const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                    const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-                    scrollbarThumb.style.left = `${boundedPosition}px`;
-                    imageList.scrollLeft = scrollPosition;
-                }
-
-                // Remove event listeners on mouse up
-                const handleMouseUp = () => {
-                    document.removeEventListener("mousemove", handleMouseMove);
-                    document.removeEventListener("mouseup", handleMouseUp);
-                }
-
-                // Add event listeners for drag interaction
-                document.addEventListener("mousemove", handleMouseMove);
-                document.addEventListener("mouseup", handleMouseUp);
-            });
-
-            // Slide images according to the slide button clicks
-            slideButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    const direction = button.id === "prev-slide" ? -1 : 1;
-                    const scrollAmount = imageList.clientWidth * direction;
-                    imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-                });
-            });
-
-            // Show or hide slide buttons based on scroll position
-            const handleSlideButtons = () => {
-                slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-                slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-            }
-
-            // Update scrollbar thumb position based on image scroll
-            const updateScrollThumbPosition = () => {
-                const scrollPosition = imageList.scrollLeft;
-                const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-                scrollbarThumb.style.left = `${thumbPosition}px`;
-            }
-
-            // Call these two functions when image list scrolls
-            imageList.addEventListener("scroll", () => {
-                updateScrollThumbPosition();
-                handleSlideButtons();
-            });
-        }
-
-        window.addEventListener("resize", initSlider);
-        window.addEventListener("load", initSlider);
-
-
-
         const year = document.querySelector('.year');
         const currentYear = new Date().getFullYear();
 
         year.innerHTML = currentYear;
-
-
     </script>
 
 </body>
